@@ -681,30 +681,3 @@ export default function BookingModal({ equipment, user, onClose }) {
               </span>
             </div>
           </div>
-
-          {/* Action Footer */}
-          <div className="flex flex-col-reverse gap-3 border-t border-base-300/70 pt-4 sm:flex-row sm:items-center sm:justify-end">
-            <button
-              type="button"
-              onClick={onClose}
-              className="btn btn-ghost rounded-xl font-semibold"
-            >
-              Cancel
-            </button>
-            <button
-              type="submit"
-              className="btn btn-primary rounded-xl px-6 font-bold shadow-lg shadow-primary/25 transition-all"
-              disabled={submitting || checking}
-            >
-              {submitting ? (
-                <span className="loading loading-spinner loading-sm" />
-              ) : null}
-              <span>Confirm &amp; Continue to Payment</span>
-              {!submitting && <FiArrowRight className="h-4 w-4" aria-hidden="true" />}
-            </button>
-          </div>
-        </form>
-      </div>
-    </div>
-  );
-}
